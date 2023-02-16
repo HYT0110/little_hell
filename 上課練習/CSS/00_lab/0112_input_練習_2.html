@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0112_input練習_2</title>
+    <style>
+        /* 當滑鼠游標經過選項文字，設定背景顏色: yellow */
+        label:hover {
+            background-color: yellow;
+        }
+
+        /* 當選取時，設定選到的文字顏色: blue */
+        input[type="radio"]:checked+label {
+            color: blue;
+        }
+
+        /* 補充: 改變單選框按下的顏色 */
+        input[type="radio"] {
+            accent-color: red;
+        }
+    </style>
+</head>
+<body>
+    <input name="question" type="radio" id="cb1">
+    <label for="cb1">選項1</label>
+    <input name="question" type="radio" id="cb2">
+    <label for="cb2">選項2</label>
+    <input name="question" type="radio" id="cb3">
+    <label for="cb3">選項3</label>
+</body>
+</html>

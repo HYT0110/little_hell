@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+        }
+
+        .d1 {
+            background-image: radial-gradient(circle, white 0%, lightcoral 10%);
+            position: absolute;
+            left: 200px;
+        }
+
+        .d2 {
+            background-image: radial-gradient(circle, white 0%, lightskyblue 10%);
+            position: absolute;
+            left: 200px;
+
+            /* 練習和測試 2D 相關的設定值 */
+            /* translate */
+            /* transform: translateX(100px); */
+            /* transform: translateY(50px); */
+            /* transform: translate(50px, 50px); */
+
+            /* scale */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            /* transform: scale(2); */
+            /* transform: scale(2, 3); */
+
+            /* rotate */
+            /* transform: rotate(20deg); */
+
+            /* skew */
+            /* transform: skewX(20deg); */
+            /* transform: skewY(20deg); */
+            /* transform: skew(20deg, 20deg); */
+            /* transform: skew(20deg); */
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h4>CSS 2D Transforms</h4>
+    <p><a href="https://www.w3schools.com/css/css3_2dtransforms.asp">https://www.w3schools.com/css/css3_2dtransforms.asp</a></p>
+    <h4>CSS transform Property</h4>
+    <p><a href='https://www.w3schools.com/cssref/css3_pr_transform.asp'>https://www.w3schools.com/cssref/css3_pr_transform.asp</a></p>
+    <hr>
+
+    <div class="d1"></div>
+    <div class="d2"></div>
+
+</body>
+
+</html>

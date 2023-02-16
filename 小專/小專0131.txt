@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Document</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Set height of body and the document to 100% */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 15%;
+            text-align: center;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            width: 60%;
+        }
+
+        #Home {
+            background-color: rgb(197, 161, 139);
+        }
+
+        #News {
+            background-color: rgb(193, 207, 128);
+        }
+
+        #Contact {
+            background-color: rgb(114, 114, 150);
+        }
+
+        #About {
+            background-color: rgb(211, 184, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="row">
+        <div class="col-1" style=" background-color: aliceblue;"></div> -->
+
+        <div class="d-flex justify-content-center w-80">
+            <button class="tablink " onclick="openPage('Home', this, 'rgb(197, 161, 139)')">Home</button>
+            <button class="tablink " onclick="openPage('News', this, 'rgb(193, 207, 128)')"
+            id="defaultOpen">News</button>
+            <button class="tablink " onclick="openPage('Contact', this, 'rgb(114, 114, 150)')">Contact</button>
+            <button class="tablink " onclick="openPage('About', this, 'rgb(211, 184, 134)')">About</button>
+        </div>
+
+
+        <div id="Home" class="tabcontent w-80">
+            <h3>Home</h3>
+            <!-- 拍照年資 +習慣風格(圖片)-->
+            <!-- 相機型號+相機圖+ -->
+            <p></p>
+        </div>
+        
+        <div id="News" class="tabcontent w-80">
+            <h3>試算</h3>
+            <!-- 建立div+單選 (乾燥花束、鮮花、花圈、洋裝、禮服、復古風、韓式修圖)+距離(北中南東/離島)+時數-->
+            <!-- 寫checked可以cal加減 var變數-->
+            <!-- 加入自己的插畫 預覽圖-->
+            <p>Some news this fine day!</p>
+        </div>
+        
+        <div id="Contact" class="tabcontent w-80">
+            <h3>Contact</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+            <!-- FB/IG/LINE 官方logo+自己預覽圖 -->
+        </div>
+        <div id="About" class="tabcontent w-80">
+        <h3>作品展示</h3>
+        <!-- 地區+風景特色 -->
+        <!-- 婚紗/閨密照/風景外拍照(sup)/棚內照/車展照片/婚禮跟拍 -->
+        <!-- 左右穿插照片文字說明 +配合背景顏色-->
+        <p>Do what I can do.</p>
+
+        </div>
+    <!-- </div> -->
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+
+</body>
+
+</html>

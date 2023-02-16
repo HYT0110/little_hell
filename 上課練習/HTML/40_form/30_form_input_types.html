@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- 參照 30_form_input_types_完成圖.png 製作一份表單，輸入欄位為必填 -->
+    <h3>海上餐廳-會員註冊</h3>
+    <form>
+        <fieldset>
+            <legend>基本資料</legend>
+            <label for="userName">姓名:</label>
+            <input type="text" id="userName"
+                   placeholder="請輸入中文全名"
+                   required>
+            <br>
+            <label for="userEmail">email:</label>
+            <input type="email" id="userEmail"
+                   required>
+            <br>
+            <label for="userPwd">密碼:</label>
+            <input type="password" id="userPwd"
+                   required>
+        </fieldset>
+        <br>
+        <input name="news" type="checkbox" 
+               id="subscribe" checked>
+        <label for="subscribe">訂閱最新資訊</label>
+        <input name="contract" type="checkbox" 
+               id="agree" checked>
+        <label for="agree">同意使用者條款</label>
+
+        <br><br>
+        <!-- <input type="submit" value="哈囉"> -->
+    </form>
+
+</body>
+
+</html>

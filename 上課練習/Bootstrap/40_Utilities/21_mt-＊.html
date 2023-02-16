@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+    <style>
+        div>div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box {
+            background-color: lightcoral;
+
+            /* 20. 外層容器加入 padding */
+            /* padding: 5px; */
+            /* padding-top: 5px; */
+
+            /* 21. 外層容器加入 border*/
+            /* border: 1px solid white; */
+        }
+
+        .mydiv {
+            background-color: lightgreen;
+
+            /* 22. 改變為  display: inline-block; */
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 複習: 兩個元素之間的距離 -->
+    <!-- <div class="box" style="margin-bottom: 50px;">
+        <div class="mydiv">A</div>
+    </div> -->
+
+    <!-- <hr> -->
+
+    <!-- <div class="box" style="margin-top: 80px;">
+        <div class="mydiv">B</div>
+    </div> -->
+
+
+    <!-- 10. 試試看，在 .box> div 加入 margin-top 樣式 -->
+    <!-- 解決崩塌問題: 20~22註解 擇一使用 -->
+    <div class="box">
+        <div class="mydiv" style="margin-top: 50px;">A</div>
+    </div>
+
+    <hr>
+
+    <div class="box">
+        <div class="mydiv">B</div>
+    </div>
+
+</body>
+
+</html>

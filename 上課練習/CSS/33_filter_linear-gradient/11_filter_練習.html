@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_filter_練習</title>
+    <style>
+        img {
+            width: 200px;
+        }
+
+        input,
+        label {
+            margin: 20px 5px;
+        }
+
+        #blur:checked~img {
+            filter: blur(5px);
+        }
+
+        #brightness:checked~img {
+            filter: brightness(200%);
+        }    
+        
+        #contrast:checked~img {
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 建立 input radio、label -->
+    <!-- 加入 img -->
+    <!-- 設定 img width -->
+    <!-- 設定 radio btn、label margin -->
+    <!-- 點 radio btn 套用 filter -->
+    <input name="filter" type="radio" id="blur">
+    <label for="blur">blur(5px)</label>
+    <input name="filter" type="radio" id="brightness">
+    <label for="brightness">brightness(200%)</label>
+    <input name="filter" type="radio" id="contrast">
+    <label for="contrast">contrast(200%)</label>
+    <img src="./img/sunny.jpg">
+</body>
+</html>

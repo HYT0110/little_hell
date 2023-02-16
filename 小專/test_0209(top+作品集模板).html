@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: #616153;
+            /* font-family:; */
+            background-color: #edede8;
+            /* font-feature-settings: "palt"; */
+        }
+
+        .t_header {
+            width: 7.5rem;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .t_header_inner {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 2.5rem;
+            padding-right: 1.125rem;
+            padding-bottom: 3.125rem;
+        }
+
+        .t_header_nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 3.125rem;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .nav_item {
+            width: 25.6px;
+        }
+
+        .t_header-nav .nav_item {
+            width: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .top_size {
+            height: 927px;
+        }
+
+        .top_content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            will-change: transform;
+            background-color: #edede8;
+        }
+
+        .top_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .top_inner_content {
+
+            padding-top: 13.125rem;
+            width: 70.875rem;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            pointer-events: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .top_text_right {
+            width: 9.375rem;
+            position: absolute;
+            top: 13.125rem;
+            right: 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .top_text_right_name {
+            width: 4.375rem;
+            top: 0;
+            left: -0.625rem;
+            position: absolute;
+        }
+
+        .top_text_en {
+            top: 12.8125rem;
+            left: 16.25rem;
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            opacity: .5;
+        }
+
+        .top_img {
+            width: 53.125rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 15rem;
+        }
+
+        .top_img_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: center;
+            /* margin-bottom: 40px; */
+        }
+
+        .title_en {
+            background-color: rgb(189, 137, 89);
+            color: antiquewhite;
+            font-size: 13px;
+            padding: 6px 8px;
+
+            display: inline-block;
+        }
+
+        .title_ch {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            display: block;
+            /* font-family: 'Cormorant Garamond', serif; */
+            font-weight: 600;
+            font-size: 50px;
+        }
+
+        .img_card_home {
+            display: flex;
+        }
+
+        .img_card {
+            width: 42.3%;
+        }
+
+        .more_btn {
+            width: 176px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .more_btn_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .more_btn_content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Div(top_size)包住開頭圖片與header(包含目錄nav) -->
+    <div class="top_size">
+        <!-- header定位在最右側，且設定大小.t-header -->
+        <header class="t_header">
+            <div class="t_header_inner">
+                <!-- 用H1包住首頁logo,並包住超連結(之後再用#id+js連結) -->
+                <h1>
+                    <a href=""> </a>
+                </h1>
+                <!-- 設定一個縮合的點擊縮闔圖案 -->
+                <div>
+
+                </div>
+                <!-- nav屬性t-header-nav 目錄li包a超連結(之後再用#id+js連結)-->
+                <nav class="t_header_nav">
+                    <ul>
+                        <li class="nav_item"><a href=""></a></li>
+                        <li class="nav_item"><a href=""></a></li>
+                        <!-- 要設定下拉選單(晚點弄) -->
+                        <li class="nav_item"><a href=""></a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </header>
+        <!-- 先用一個DIV包住開頭圖片的全部 -->
+        <div class="top_content">
+            <!-- 一個DIV設定position -->
+            <div class="top_inner">
+                <!-- 再一個DIV包住文字說明 -->
+                <div class="top_inner_content">
+                    <!-- 右邊的標題文字 -->
+                    <div class="top_text_right">
+                        <!-- 文字內容位置 -->
+                        <div class="top_text_right_name">
+
+                        </div>
+                    </div>
+                    <!-- 左邊裝飾的英文字 -->
+                    <p class="top_text_en">
+
+                    </p>
+
+                </div>
+                <!-- 首頁圖片區 -->
+                <!-- 圖片區位置設定 -->
+                <div class="top_img">
+                    <!-- 圖片大小設定 -->
+                    <div class="top_img_inner">
+                        <!-- 網頁的大小範例width: 712px;height: 927px; -->
+                        <img src="" alt="">
+                        <!-- 如果要做輪播圖ul放這 -->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 作品展示區div 尚未設定大小-->
+    <div>
+        <!-- 作品展示區標題 -->
+        <h3>
+            <!-- 有底色的小字 -->
+            <span class="title_en">Portfolio</span>
+            <!-- 中文標題 -->
+            <span class="title_ch">作品集</span>
+
+        </h3>
+        <!-- 圖片們(在這層設定照片的距離) -->
+        <div class="img_card_home">
+            <!-- 圖片1 用超連結包住圖片+文字說明-->
+            <div class="img_card">
+                <a href="">
+                    <img src="" alt="">
+                    <!-- 圖片說明 -->
+                    <span></span>
+                </a>
+            </div>
+            <!-- 圖片2 -->
+            <div class="img_card">
+                <a href="">
+                    <img src="" alt="">
+                    <!-- 圖片說明 -->
+                    <span></span>
+                </a>
+            </div>
+
+        </div>
+        <!-- 看更多的超連結 -->
+        <!-- 外層 -->
+        <div class="more_btn">
+            <!-- 超連結 -->
+            <a class="more_btn_inner" href="">
+                <div class="more_btn_content">
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>小專最新版</title>
+    <style>
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+        }
+
+        div {
+            display: block;
+        }
+
+        body {
+            color: #616153;
+            /* font-family:; */
+            background-color: #edede8;
+            /* font-feature-settings: "palt"; */
+        }
+
+        .t_header {
+            width: 5.5rem;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .t_header_inner {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 2.5rem;
+            padding-right: 1.125rem;
+            padding-bottom: 3.125rem;
+        }
+
+        .t_header_nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 3.125rem;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            border: none;
+            list-style-type: none;
+        }
+
+
+        .nav_item {
+            width: 25.6px;
+            color: #616153;
+            margin-bottom: 10px;
+        }
+
+        .t_header-nav .nav_item {
+            width: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .top_size {
+            height: 927px;
+        }
+
+        .top_content {
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            will-change: transform;
+            background-color: #edede8;
+        }
+
+        .top_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .top_inner_content {
+
+            padding-top: 13.125rem;
+            width: 70.875rem;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            pointer-events: none;
+            position: relative;
+            /* z-index: 1; */
+        }
+
+        .top_text_right {
+            width: 9.375rem;
+            position: absolute;
+            top: 13.125rem;
+            right: 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .top_text_right_name {
+            width: 4.375rem;
+            top: 0;
+            left: -0.625rem;
+            position: absolute;
+        }
+
+        .top_text_en {
+            top: 12.8125rem;
+            left: 16.25rem;
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            opacity: .5;
+            z-index: 5;
+            font-size: 80px;
+            overflow: auto;
+        }
+
+        .top_img {
+            width: 53.125rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 15rem;
+        }
+
+        .top_img_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            text-align: center;
+            /* margin-bottom: 40px; */
+        }
+
+        .title_en {
+            background-color: rgb(189, 137, 89);
+            color: antiquewhite;
+            font-size: 13px;
+            padding: 6px 8px;
+
+            display: inline-block;
+        }
+
+        .title_ch {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            display: block;
+            /* font-family: 'Cormorant Garamond', serif; */
+            font-weight: 600;
+            font-size: 50px;
+        }
+
+        .img_card_home {
+            display: flex;
+        }
+
+        .img_card {
+            width: 42.3%;
+        }
+
+        .more_btn {
+            width: 176px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .more_btn_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            /* right: 100px; */
+        }
+
+        .more_btn_content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 2;
+        }
+
+        .wall_ph_area {
+            width: 1280px;
+            height: 932px;
+            display: flex;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        /* 設定一個牆貼ph{    position: absolute;} */
+        .wall_ph {
+
+            /*這段是有wall_content_inner才會用到的
+             position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            height: 120%; */
+            position: absolute;
+        }
+
+
+        .ph_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .ph_inner img {
+            position: absolute;
+            top: 2%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            font-family: "object-fit:cover";
+            object-fit: cover;
+        }
+
+        .wall_ph1 {
+            position: absolute;
+            width: 720px;
+            height: 528px;
+            top: 0;
+            left: 0;
+        }
+
+        .wall_ph2 {
+            position: absolute;
+            width: 304px;
+            height: 400px;
+            top: 288px;
+            left: 764px;
+        }
+
+        .wall_ph3 {
+            position: absolute;
+            width: 240px;
+            height: 312px;
+            top: -200px;
+            left: 400px;
+        }
+
+        .tabcontent {
+            color: white;
+            display: none;
+            /* padding: 100px 20px; */
+            height: 100%;
+            /* width: 60%; */
+        }
+
+        .tablinks {
+            /* background-color: #555; */
+            color: rgb(104, 100, 100);
+            /* float: left; */
+            border: none;
+            outline: none;
+            cursor: pointer;
+            /* padding: 14px 16px; */
+            /* font-size: 17px; */
+            /* width: 15%; */
+            text-align: center;
+        }
+
+        .PortfolioTitle {
+            height: 364px;
+            padding-top: 92px;
+            width: 100%;
+            background-color: #f4f4ef;
+        }
+
+        .PortfolioTitle_inner {
+            width: 896px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .PortfolioTitle_inner_en {
+            top: 2.8125rem;
+            left: 10.25rem;
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            opacity: .5;
+            z-index: 5;
+            font-size: 40px;
+            overflow: auto;
+            background-color: rgb(189, 137, 89);
+            color: antiquewhite;
+        }
+
+        .PortfolioTitle_inner_ch {
+            line-height: 1.5;
+            font-family: YuMincho, 游明朝, Times New Roman, Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif;
+            font-size: 48px;
+            text-orientation: upright;
+            color: #616153;
+            width: 50px;
+            height: auto;
+        }
+
+        /* 試著設立背景圖片 */
+        /* .hero-image { */
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg"); */
+
+        /* Set a specific height */
+        /* height: 50%; */
+
+        /* Position and center the image to scale nicely on all screens */
+        /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+
+        /* @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1359px)  
+        .PortfolioTitle_inner_ch {
+            font-size: 48px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Div(top_size)包住開頭圖片與header(包含目錄nav) -->
+    <header class="t_header">
+        <div class="t_header_inner">
+            <!-- 用H1包住首頁logo,並包住超連結(之後再用#id+js連結) -->
+            <h1>
+                <a id="defaultOpen" class="tablinks" onclick="openPage('Home', this, 'rgb(197, 161, 139)')" href=""><img
+                        src="./7463.png_300.png" alt=""
+                        style="height: 50px; width: 50px;margin: auto;justify-content: center;"></a>
+            </h1>
+            <!-- 設定一個縮合的點擊縮闔圖案 -->
+            <div>
+
+            </div>
+            <!-- nav屬性t-header-nav 目錄li包a超連結(之後再用#id+js連結)
+                    目錄釘在右邊後(要設定下面的東西margin避開內容跟目錄重疊)
+                假設要跳畫面再用DIV把首頁包起來，然後目錄階層顯示z-index位階，或整個拉出去-->
+            <nav class="t_header_nav">
+                <ul>
+                    <li class="nav_item tablinks" onclick="openPage('Portfolio', this, 'rgb(197, 161, 139)')">作品集</li>
+                    <!-- 要設定下拉選單(晚點弄) -->
+                    <li class="nav_item tablinks" onclick="openPage('Contact', this, 'rgb(197, 161, 139)')">聯絡資訊</li>
+                    <li class="nav_item tablinks" onclick="openPage('QA', this, 'rgb(197, 161, 139)')">Q & A</li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+    <!-- 首頁DIV -->
+    <div id="Home" class="tabcontent">
+        <div class="top_size">
+            <!-- header定位在最右側，且設定大小.t-header -->
+
+            <!-- 先用一個DIV包住開頭圖片的全部 -->
+            <div class="top_content">
+                <!-- 一個DIV設定position -->
+                <div class="top_inner">
+                    <!-- 再一個DIV包住文字說明 -->
+                    <div class="top_inner_content">
+                        <!-- 右邊的標題文字 -->
+                        <div class="top_text_right">
+                            <!-- 文字內容位置 -->
+                            <div class="top_text_right_name">
+                                <p>中文標題</ㄣ>
+
+                            </div>
+                        </div>
+                        <!-- 左邊裝飾的英文字 -->
+                        <p class="top_text_en">
+                            <span>dfgdfg gjfgh</span>
+                            <!-- <span>dfgdfg gjfgh</span> -->
+
+                        </p>
+
+
+                    </div>
+                    <!-- 首頁圖片區 -->
+                    <!-- 圖片區位置設定 -->
+                    <div class="top_img">
+                        <!-- 圖片大小設定 -->
+                        <div class="top_img_inner">
+                            <!-- 網頁的大小範例width: 712px;height: 927px; -->
+                            <img src="./7463.png_300.png" alt="" style="width: 712px;height: 927px;">
+                            <!-- 如果要做輪播圖ul放這 -->
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 作者介紹 文字+自拍+相機照片-->
+        <!-- 文字區 -->
+        <div>
+            <span></span>
+        </div>
+
+        <!-- 照片區 div照片牆貼感-->
+        <div class="wall_ph_area">
+            <!-- 照片各自設定位置1.top: -94px;2. -->
+            <div class="wall_ph1" style="top: -94px;">
+                <div class="ph_inner">
+                    <figure>
+                        <img src="./7463.png_300.png" alt="">
+                        <figcaption>照片文字說明1</figcaption>
+                    </figure>
+                    <!-- <span style="z-index: 5;"></span> -->
+                    <!-- img設定style設定寬高 -->
+
+                </div>
+
+            </div>
+            <div class="wall_ph2" style="top: 200px;">
+                <div class="ph_inner">
+                    <span>照片文字說明2</span>
+                    <!-- img設定style設定寬高 -->
+                    <img src="./7463.png_300.png" alt="">
+
+                </div>
+
+            </div>
+            <div class="wall_ph3" style="top: 500px;">
+                <div class="ph_inner">
+                    <span>照片文字說明3</span>
+                    <!-- img設定style設定寬高 -->
+                    <img src="./7463.png_300.png" alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 作品展示區div 尚未設定大小-->
+        <div>
+            <!-- 作品展示區標題 -->
+            <h3>
+                <!-- 有底色的小字 -->
+                <span class="title_en">Portfolio</span>
+                <!-- 中文標題 -->
+                <span class="title_ch">作品集</span>
+
+            </h3>
+            <!-- 圖片們(在這層設定照片的距離) -->
+            <div class="img_card_home">
+                <!-- 圖片1 用超連結包住圖片+文字說明-->
+                <div class="img_card">
+                    <a href="">
+                        <img src="./7463.png_300.png" alt="">
+                        <!-- 圖片說明 -->
+                        <span>1231313</span>
+                    </a>
+                </div>
+                <!-- 圖片2 -->
+                <div class="img_card">
+                    <a href="">
+                        <img src="./7463.png_300.png" alt="">
+                        <!-- 圖片說明 -->
+                        <span>123131</span>
+                    </a>
+                </div>
+
+            </div>
+            <!-- 看更多的超連結   照片的大小還沒設定-->
+            <!-- 外層 -->
+            <div class="more_btn" onclick="openPage('Portfolio', this, 'rgb(197, 161, 139)')">
+                <!-- 超連結 -->
+                <a class="more_btn_inner" href="">
+                    <div class="more_btn_content">
+                        <span>more & more</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 作品集div -->
+    <div id="Portfolio" class="tabcontent">
+        <div class="PortfolioTitle">
+            <div class="PortfolioTitle_inner">
+                <div class="PortfolioTitle_inner_en">Portfolio</div>
+                <div class="PortfolioTitle_inner_ch" style="will-change: auto;
+                transform: translate(0px, 0vh);">
+                    作品集
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="img_card_home">
+            <!-- 參考這裡https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive -->
+            <!-- 圖片1 用超連結包住圖片+文字說明-->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <!-- 參考這裡https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                    <span>1231313</span>
+                </a>
+            </div>
+            <!-- 圖片2 -->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <span>123131</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- 聯絡資料div -->
+    <div id="Contact" class="tabcontent">
+        <div class="img_card_home">
+            <!-- 圖片1 用超連結包住圖片+文字說明-->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <span>1111111</span>
+                </a>
+            </div>
+            <!-- 圖片2 -->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <span>111111</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Q&Adiv -->
+    <div id="QA" class="tabcontent">
+        <div class="img_card_home">
+            <!-- 圖片1 用超連結包住圖片+文字說明-->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <span>22222</span>
+                </a>
+            </div>
+            <!-- 圖片2 -->
+            <div class="img_card">
+                <a href="">
+                    <img src="./7463.png_300.png" alt="">
+                    <!-- 圖片說明 -->
+                    <span>22222</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 聯絡資料小圖ig fb line -->
+    <!-- 設定float讓區塊會自己隨著螢幕大小位移，所和縮小要用餔斯吹 響應式設計要用@media-->
+    <!-- footer -->
+    <footer></footer>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            console.log("12132123");
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+            console.log(tabcontent);
+            console.log(tablinks);
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

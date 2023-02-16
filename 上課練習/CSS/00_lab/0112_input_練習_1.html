@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0112_input練習_1</title>
+    <style>
+        /* 04-01. 設定取得焦點的背景顏色greenyellow */
+        /* :focus */
+        #tb:focus {
+            background-color: greenyellow;
+        }
+
+        /* 04-02. 設定勾選時 label 顏色 blue */
+        /* :checked */
+        #cb:checked+label {
+            color: blue;
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" id="tb"> <br><br>
+    <input type="checkbox" id="cb">
+    <label for="cb">選我</label>
+</body>
+</html>
